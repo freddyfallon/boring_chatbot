@@ -7,16 +7,20 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <ul>
-      <li>
-        <%= link_to "Sign in", '/users/sign_in' %>
-      </li>
-      <li>
-        <%= link_to "Sign up", '/users/sign_up' %>
-      </li>
-    </ul>
-    <%= yield %>
+    <header>
+      <ul>
+        <% if !current_page?(admin_path) %>
+        <li>
+          <%= link_to "Admin area", '/admin' %>
+        </li>
+        <% end %>
+      </ul>
+    </header>
+    <main>
+    </main>
+    <footer>
+    </footer>
+      <%= yield %>
   </body>
 </html>
