@@ -10,9 +10,12 @@
   <body>
     <header>
       <ul>
+        <li class="logo">
+          <%= link_to "Boring Chatbot", root_path %>
+        </li>
         <% if !current_page?(admin_path)%>
         <li>
-          <%= link_to "Admin area", '/admin' %>
+          <%= link_to "Admin area", admin_path %>
         </li>
         <% elsif user_signed_in? %>
         <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
