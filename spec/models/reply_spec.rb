@@ -13,4 +13,11 @@ RSpec.describe Reply, type: :model do
     expect(reply).to have(1).error_on(:text)
     expect(reply).not_to be_valid
   end
+
+  it 'is not valid unless it has text' do
+    user = User.create(email: 'test@test.test', password: 'password', password_confirmation: 'password')
+    reply = user.replies.create(tolerance_level: 2)
+    expect(reply).to have(2).errors_on(:text)
+    expect(reply).not_to be_valid
+  end
 end
