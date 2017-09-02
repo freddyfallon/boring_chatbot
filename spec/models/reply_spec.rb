@@ -20,4 +20,18 @@ RSpec.describe Reply, type: :model do
     expect(reply).to have(2).errors_on(:text)
     expect(reply).not_to be_valid
   end
+
+  it 'is not valid unless its tolerance_level is between 1 and 3' do
+    user = User.create(email: 'test@test.test', password: 'password', password_confirmation: 'password')
+    reply = user.replies.create(text: 'Hello!', tolerance_level: 5)
+    expect(reply).to have(1).error_on(:tolerance_level)
+    expect(reply).not_to be_valid
+  end
+
+  it 'is not valid unless it has a tolerance_level' do
+    user = User.create(email: 'test@test.test', password: 'password', password_confirmation: 'password')
+    reply = user.replies.create(text: 'a')
+    expect(reply).to have(2).errors_on(:tolerance_level)
+    expect(reply).not_to be_valid
+  end
 end
