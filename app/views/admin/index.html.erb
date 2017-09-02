@@ -1,14 +1,17 @@
-<ul>
-  <% if user_signed_in? %>
-  <li>
-  <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-  </li>
-  <% else %>
-  <li>
-    <%= link_to "Sign in", '/users/sign_in' %>
-  </li>
-  <li>
-    <%= link_to "Sign up", '/users/sign_up' %>
-  </li>
-  <% end %>
-</ul>
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="sign-in-area">
+      <h1>Sign in</h1>
+      <p class="sign-in-text">Welcome to the Admin area of Boring Chatbot. To make changes to the chatbot's logic and the messages and replies, you will need to either log in or sign up below.</p>
+        <% if user_signed_in? %>
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Sign in", '/users/sign_in' %>
+          <%= link_to "Sign up", '/users/sign_up' %>
+        <% end %>
+      </ul>
+    </div>
+
+  </body>
+</html>

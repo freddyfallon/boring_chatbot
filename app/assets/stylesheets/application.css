@@ -10,6 +10,91 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require normalize-rails
  *= require_tree .
  *= require_self
  */
+
+
+.sign-in-area {
+  text-align: center;
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+}
+
+.login-form {
+  text-align: center;
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+}
+
+.sign-in-area a {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2em;
+  display: inline-block;
+  width: 6em;
+  height: 2em;
+  background-color: #EEEEEE;
+  color: #333333;
+  text-decoration: none;
+  padding: 5px 5px 5px 0.5em;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+.sign-in-area h1 {
+  text-align: center;
+}
+
+#new_user input[type="submit"] {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1em;
+  display: inline-block;
+  width: 10em;
+  height: 3em;
+  background-color: #EEEEEE;
+  color: #333333;
+  text-decoration: none;
+  padding: 5px 5px 5px 0.5em;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  margin-bottom: 1em;
+}
+
+header {
+  height:2em;
+  padding: 1em;
+  background-color: orange;
+  width: 100%;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline;
+  list-style-type: none;
+}
+
+header ul li a {
+  vertical-align: middle;
+  line-height: 2em;
+  font-family: arial;
+  text-decoration: none;
+}
+
+main {
+  padding-left: 1em;
+  padding-right: 1em;
+}

@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise',  git: 'https://github.com/plataformatec/devise.git'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Add normalize.css
+gem 'normalize-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

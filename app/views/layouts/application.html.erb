@@ -3,24 +3,26 @@
   <head>
     <title>BoringChatbot</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
   <body>
     <header>
       <ul>
-        <% if !current_page?(admin_path) %>
+        <% if !current_page?(admin_path)%>
         <li>
           <%= link_to "Admin area", '/admin' %>
         </li>
+        <% elsif user_signed_in? %>
+        <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
         <% end %>
       </ul>
     </header>
     <main>
+      <%= yield %>
     </main>
     <footer>
     </footer>
-      <%= yield %>
   </body>
 </html>
