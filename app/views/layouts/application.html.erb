@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <link href="https://fonts.googleapis.com/css?family=Anton|BioRhyme|Dosis|Merriweather|Poppins|Open+Sans:800i" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -14,7 +14,7 @@
           <%= link_to "Boring Chatbot", root_path %>
         </li>
         <% if !current_page?(admin_path)%>
-        <li>
+        <li id="admin-area">
           <%= link_to "Admin area", admin_path %>
         </li>
         <% elsif user_signed_in? %>

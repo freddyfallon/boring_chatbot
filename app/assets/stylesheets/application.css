@@ -18,6 +18,7 @@
 
 .sign-in-area {
   text-align: center;
+  vertical-align: middle;
   margin: auto;
   width: 70%;
   padding: 10px;
@@ -56,8 +57,8 @@
   vertical-align: middle;
   line-height: 1em;
   display: inline-block;
-  width: 10em;
-  height: 3em;
+  width: 8em;
+  height: 1.5em;
   background-color: #EEEEEE;
   color: #333333;
   text-decoration: none;
@@ -71,7 +72,7 @@
 
 header {
   height: 3em;
-  background-color: #BA55D3;
+  background-color: #F5F5F5;
   width: 100%;
 }
 
@@ -80,7 +81,7 @@ header ul {
   vertical-align: middle;
   line-height: 3em;
   margin: 0;
-  padding-left: 1em;
+  /*padding-left: 1em;*/
   font-size: 1em;
 }
 
@@ -96,13 +97,33 @@ header ul li a {
   line-height: 2em;
   font-family: arial;
   text-decoration: none;
-  color: #FFD700;
+  color: #00BFFF;
 }
 
-.logo {
-  font-size: 1em;
+.logo a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#admin-area {
+  float: right;
+  margin-right: 2em;
 }
 
 main {
-  padding-left: 1em;
+  display: table;
+  position: absolute;
+  height: 80%;
+  padding-left: 2.5em;
+}
+
+main > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+h1 {
+  font-family: 'Merriweather';
+  color: #696969;
 }

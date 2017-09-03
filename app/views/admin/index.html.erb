@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <div class="sign-in-area">
-      <h1>Sign in</h1>
-      <p class="sign-in-text">To make changes to the chatbot's logic and the messages and replies, you will need to either log in or sign up below.</p>
-        <% if user_signed_in? %>
-        <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-        <% else %>
+    <% if user_signed_in? %>
+    <h1>Boring Chatbot Admin</h1>
+    <% else %>
+      <div class="sign-in-area">
+        <h1>Sign in</h1>
+          <p class="sign-in-text">To make changes to the chatbot's logic and the messages and replies, you will need to either log in or sign up below.</p>
           <%= link_to "Sign in", '/users/sign_in' %>
-          <%= link_to "Sign up", '/users/sign_up' %>
-        <% end %>
-      </ul>
+        <%= link_to "Sign up", '/users/sign_up' %>
+    <% end %>
     </div>
 
   </body>
