@@ -1,6 +1,8 @@
 class MessagesController < ApplicationController
+  before_action :set_message
+  
   def index
-    @messages = Message.all
-    @array = @messages.order("RANDOM()")
+    json_response(@messages)
   end
+
 end

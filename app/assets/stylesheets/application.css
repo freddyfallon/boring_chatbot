@@ -101,6 +101,8 @@ header ul li a {
 }
 
 .logo a {
+  vertical-align: middle;
+  line-height: 0.5em;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   font-size: 2em;
@@ -112,13 +114,14 @@ header ul li a {
 }
 
 main {
+  width: 100%;
   display: table;
   position: absolute;
   height: 80%;
-  padding-left: 2.5em;
 }
 
 main > div {
+  padding-left: 2.5em;
   display: table-cell;
   vertical-align: middle;
 }
@@ -126,4 +129,88 @@ main > div {
 h1 {
   font-family: 'Merriweather';
   color: #696969;
+  width: 100%;
+  float:left;
+}
+
+.message {
+  float: right;
+  padding-right: 5em;
+}
+
+.message-area {
+  width: 60%;
+  height: 10px;
+}
+
+.chat-area {
+  padding-top: 2em;
+  width: 40%;
+  position: relative;
+  float: right;
+}
+
+.speech-bubble-message {
+  padding-top: 0em;
+  padding-bottom: 0em;
+  padding-left: 2em;
+  padding-right: 2em;
+	position: relative;
+	background: #2ab4f6;
+	border-radius: .4em;
+  margin-right: 4em;
+  margin-top: 1em;
+}
+
+.speech-bubble-message p {
+  color: white;
+  font-weight: bold;
+  font-family: "Dosis"
+}
+
+.speech-bubble-message:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0;
+  border: 0.406em solid transparent;
+  	border-right-color: #00aabb;
+  	border-left: 0;
+  	border-bottom: 0;
+  	margin-top: -1em;
+  	margin-left: -0.406em;
+}
+
+.speech-bubble-reply {
+  padding-top: 0em;
+  padding-bottom: 0em;
+  padding-left: 2em;
+  padding-right: 2em;
+	position: relative;
+	background: #eaeaea;
+	border-radius: .4em;
+  margin-top: 1em;
+  margin-right: 4em;
+}
+
+.speech-bubble-reply p {
+  color: #6b6b6b;
+  font-weight: bold;
+  font-family: "Dosis"
+}
+
+.speech-bubble-reply:after {
+  content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 0.406em solid transparent;
+	border-left-color: #eaeaea;
+	border-right: 0;
+	border-bottom: 0;
+	margin-top: -1em;
+	margin-right: -0.406em;
 }

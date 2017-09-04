@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <div class="message-area">
+    <div class="reply-one-lvl-one" style="display:none">
+      <%= @level_one_replies.sample %>
+    </div>
+    <div class="reply-one-lvl-two" style="display:none">
+      <%= @level_one_replies.sample %>
+    </div>
+    <div class="reply-one-lvl-three" style="display:none">
+      <%= @level_one_replies.sample %>
+    </div>
+    <div class="opening-message">
+      <p>Press hello to get started</p>
+      <a href='#'>
+          <%=
+            if @first_message == nil
+              'Admin? Add a message'
+            else
+              @first_message.text
+            end
+            %>
+      </a>
+    </div>
+      <div class="message-options" style="display:none">
+      <p class="message-options-intro">Now choose your reply. Make it good!</p>
+      <div class="level-one-message">
+        <a href="#">
+          <%=
+            if @level_one_message == nil
+              'Admin? Add a message'
+            else
+              @level_one_message.text
+            end
+            %>
+        </a>
+      </div>
+      <div class="level-two-message">
+        <a href="#">
+          <%=
+            if @level_two_message == nil
+              'Admin? Add a message'
+            else
+              @level_two_message.text
+            end
+            %>
+        </a>
+      </div>
+      <div class="level-three-message">
+        <a href="#">
+          <%=
+            if @level_three_message == nil
+              'Admin? Add a message'
+            else
+              @level_three_message.text
+            end
+            %>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="chat-area">
+    <div class="message message-one speech-bubble-message" style="display:none">
+      <p><%= @first_message.text %></p>
+    </div>
+    <div class="message reply-one speech-bubble-reply" style="display:none">
+      <p><%= @level_one_reply.text %></p>
+    </div>
+  </div>
+
+</html>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'messages#index'
+  root 'game#index'
   get 'admin', :to => 'admin#index'
+
+
 end
