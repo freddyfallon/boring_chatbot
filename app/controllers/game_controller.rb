@@ -1,20 +1,96 @@
 class GameController < ApplicationController
   def index
-    @messages = Message.all
-    @first_messages = [].push(Message.find_by boring_level: 1)
+
+    #Opening message
+
+    @first_messages = [].push(Message.find_by boring_level: 0)
     @first_message = @first_messages.sample
-    @level_one_messages = [].push(Message.find_by boring_level: 1)
-    @level_one_message = @level_one_messages.sample
-    @level_two_messages = [].push(Message.find_by boring_level: 2)
-    @level_two_message = @level_two_messages.sample
-    @level_three_messages = [].push(Message.find_by boring_level: 3)
-    @level_three_message = @level_three_messages.sample
-    @level_one_replies = [].push(Reply.find_by tolerance_level: 1)
-    @level_one_reply = @level_one_replies.sample
-    @level_two_replies = [].push(Reply.find_by tolerance_level: 2)
-    @level_two_reply = @level_two_replies.sample
-    @level_three_replies = [].push(Reply.find_by tolerance_level: 3)
-    @level_three_reply = @level_three_replies.sample
+
+    @first_replies = [].push(Reply.find_by tolerance_level: 0)
+    @first_reply = @first_replies.sample
+
+    #Stage 1 - messages
+    @stage_one_messages_level_one = [].push(Message.find_by boring_level: 1, stage: 1)
+
+    @stage_one_message_level_one = @stage_one_messages_level_one.sample
+
+    @stage_one_messages_level_two = [].push(Message.find_by boring_level: 2, stage: 1)
+
+    @stage_one_message_level_two = @stage_one_messages_level_two.sample
+
+    @stage_one_messages_level_three = [].push(Message.find_by boring_level: 3, stage: 1)
+
+    @stage_one_message_level_three = @stage_one_messages_level_three.sample
+
+    #Stage 1 - replies
+
+    @stage_one_replies_level_one = [].push(Reply.find_by tolerance_level: 1, stage: 1)
+
+    @stage_one_reply_level_one = @stage_one_replies_level_one.sample
+
+    @stage_one_replies_level_two = [].push(Reply.find_by tolerance_level: 2, stage: 1)
+
+    @stage_one_reply_level_two = @stage_one_replies_level_two.sample
+
+    @stage_one_replies_level_three = [].push(Reply.find_by tolerance_level: 3, stage: 1)
+
+    @stage_one_reply_level_three = @stage_one_replies_level_three.sample
+
+    #Stage 2 - messages
+
+    @stage_two_messages_level_one = [].push(Message.find_by boring_level: 1, stage: 2)
+
+    @stage_two_message_level_one = @stage_two_messages_level_one.sample
+
+    @stage_two_messages_level_two = [].push(Message.find_by boring_level: 2, stage: 2)
+
+    @stage_two_message_level_two = @stage_two_messages_level_two.sample
+
+    @stage_two_messages_level_three = [].push(Message.find_by boring_level: 3, stage: 2)
+
+    @stage_two_message_level_three = @stage_two_messages_level_three.sample
+
+    #Stage 2 - replies
+    @stage_two_replies_level_one = [].push(Reply.find_by tolerance_level: 1, stage: 1)
+
+    @stage_two_reply_level_one = @stage_two_replies_level_one.sample
+
+    @stage_two_replies_level_two = [].push(Reply.find_by tolerance_level: 2, stage: 1)
+
+    @stage_two_reply_level_two = @stage_two_replies_level_two.sample
+
+    @stage_two_replies_level_three = [].push(Reply.find_by tolerance_level: 3, stage: 1)
+
+    @stage_two_reply_level_three = @stage_two_replies_level_three.sample
+
+    #Stage 3 - messages
+
+    @stage_three_messages_level_one = [].push(Message.find_by boring_level: 1, stage: 3)
+
+    @stage_three_message_level_one = @stage_three_messages_level_one.sample
+
+    @stage_three_messages_level_two = [].push(Message.find_by boring_level: 2, stage: 3)
+
+    @stage_three_message_level_two = @stage_three_messages_level_two.sample
+
+    @stage_three_messages_level_three = [].push(Message.find_by boring_level: 3, stage: 3)
+
+    @stage_three_message_level_three = @stage_three_messages_level_three.sample
+
+    #Stage 3 - replies
+
+    @stage_three_replies_level_one = [].push(Reply.find_by tolerance_level: 1, stage: 3)
+
+    @stage_three_reply_level_one = @stage_three_replies_level_one.sample
+
+    @stage_three_replies_level_two = [].push(Reply.find_by tolerance_level: 2, stage: 3)
+
+    @stage_three_reply_level_two = @stage_three_replies_level_two.sample
+
+    @stage_three_replies_level_three = [].push(Reply.find_by tolerance_level: 3, stage: 3)
+
+    @stage_three_reply_level_three = @stage_three_replies_level_three.sample
+
   end
 
 end

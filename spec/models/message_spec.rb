@@ -19,7 +19,7 @@ RSpec.describe Message, type: :model do
     expect(message).not_to be_valid
   end
 
-  it 'is not valid unless its boring_level is between 1 and 3' do
+  it 'is not valid unless its boring_level is between 0 and 3' do
     message = Message.create(text: 'Hello!', boring_level: 5)
     expect(message).to have(1).error_on(:boring_level)
     expect(message).not_to be_valid

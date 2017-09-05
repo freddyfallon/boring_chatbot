@@ -114,6 +114,7 @@ header ul li a {
 }
 
 main {
+  font-family: "Anton";
   width: 100%;
   display: table;
   position: absolute;
@@ -139,18 +140,19 @@ h1 {
 }
 
 .message-area {
-  width: 60%;
+  width: 50%;
   height: 10px;
 }
 
 .chat-area {
-  padding-top: 2em;
-  width: 40%;
+  padding-top: 1em;
+  width: 50%;
   position: relative;
   float: right;
 }
 
 .speech-bubble-message {
+  width: 200px;
   padding-top: 0em;
   padding-bottom: 0em;
   padding-left: 2em;
@@ -163,6 +165,7 @@ h1 {
 }
 
 .speech-bubble-message p {
+  display: inline-block;
   color: white;
   font-weight: bold;
   font-family: "Dosis"
@@ -178,11 +181,12 @@ h1 {
   	border-right-color: #00aabb;
   	border-left: 0;
   	border-bottom: 0;
-  	margin-top: -1em;
+  	margin-top: 2.15em;
   	margin-left: -0.406em;
 }
 
 .speech-bubble-reply {
+  width: 200px;
   padding-top: 0em;
   padding-bottom: 0em;
   padding-left: 2em;
@@ -195,6 +199,7 @@ h1 {
 }
 
 .speech-bubble-reply p {
+  display: inline-block;
   color: #6b6b6b;
   font-weight: bold;
   font-family: "Dosis"
@@ -211,6 +216,6 @@ h1 {
 	border-left-color: #eaeaea;
 	border-right: 0;
 	border-bottom: 0;
-	margin-top: -1em;
+	margin-top: 0.6em;
 	margin-right: -0.406em;
 }
