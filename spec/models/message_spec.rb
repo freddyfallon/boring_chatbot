@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Message, type: :model do
 
-  it 'is valid with text of more than one character and boring level of 2' do
+  it 'is valid with text of six characters, a boring level of 2, and stage of 2' do
     message = Message.create(text: 'Hello!', boring_level: 2, stage: 1)
     expect(message).to be_valid
   end
