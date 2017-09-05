@@ -64,7 +64,7 @@ $( document ).ready(function() {
     $(".stage-two-message-options").hide();
     $(".stage-two-message-level-two").show("slow");
     $(".stage-two-reply-level-two").delay(1000).show("slow");
-    $(".stage-three-message-options").delay(2000).show("fast", "swing")
+    $(".stage-three-message-options").delay(2000).show("fast", "swing");
   });
 
   $('.stage-two-level-three-message a').on('click', function(e) {
@@ -72,7 +72,7 @@ $( document ).ready(function() {
     $(".stage-two-message-options").hide();
     $(".stage-two-message-level-three").show("slow");
     $(".stage-two-reply-level-three").delay(1000).show("slow");
-    $(".lose-game").delay(2000).show("fast", "swing")
+    $(".lose-game").delay(2000).show("fast", "swing");
   });
 
 
@@ -83,13 +83,15 @@ $( document ).ready(function() {
     $(".stage-three-message-options").hide();
     $(".stage-three-message-level-one").show("slow");
     $(".stage-three-reply-level-one").delay(1000).show("slow");
+    $(".win-game").delay(2000).show("fast", "swing");
   });
 
   $('.stage-three-level-two-message a').on('click', function(e) {
     e.preventDefault();
     $(".stage-three-message-options").hide();
-    $(".stage-three-message-level-three").show("slow");
-    $(".stage-three-reply-level-three").delay(1000).show("slow");
+    $(".stage-three-message-level-two").show("slow");
+    $(".stage-three-reply-level-two").delay(1000).show("slow");
+    $(".win-game").delay(2000).show("fast", "swing");
   });
 
   $('.stage-three-level-three-message a').on('click', function(e) {
@@ -111,6 +113,10 @@ $( document ).ready(function() {
   });
 
   $('.lose-game a').on('click', function(e) {
+    location.reload();
+  });
+
+  $('.win-game a').on('click', function(e) {
     location.reload();
   });
 

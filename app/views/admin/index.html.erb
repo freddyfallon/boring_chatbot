@@ -1,8 +1,32 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <% if user_signed_in? %>
     <h1>Boring Chatbot Admin</h1>
+    <% if user_signed_in? %>
+      <div class="first-message-area">
+        First messages
+        <% @first_messages.each do |message| %>
+          <div class="message">
+              <%= message.text %>
+            <% end %>
+          </div>
+      </div>
+      <div class="first-reply-area">
+        First replies
+        <% @first_replies.each do |reply| %>
+          <div class="message">
+              <%= reply.text %>
+            <% end %>
+          </div>
+      </div>
+      <div class="level-one-message-area">
+        Stage one messages
+        <% @stage_one_messages.each do |message| %>
+          <div class="message">
+              <%= message.text %>
+            <% end %>
+          </div>
+      </div>
     <% else %>
       <div class="sign-in-area">
         <h1>Sign in</h1>

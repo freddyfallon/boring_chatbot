@@ -122,9 +122,10 @@ main {
 }
 
 main > div {
+  padding-top: 3em;
   padding-left: 2.5em;
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 h1 {
@@ -152,16 +153,17 @@ h1 {
 }
 
 .speech-bubble-message {
-  width: 200px;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  padding-left: 2em;
-  padding-right: 2em;
-	position: relative;
-	background: #2ab4f6;
-	border-radius: .4em;
+  position: relative;
+  width: 250px;
+  height: 90px;
+  padding: 0px;
+  background: #0092FF;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
   margin-right: 4em;
   margin-top: 1em;
+  padding: 1em;
 }
 
 .speech-bubble-message p {
@@ -172,30 +174,30 @@ h1 {
 }
 
 .speech-bubble-message:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	width: 0;
-	height: 0;
-  border: 0.406em solid transparent;
-  	border-right-color: #00aabb;
-  	border-left: 0;
-  	border-bottom: 0;
-  	margin-top: 2.15em;
-  	margin-left: -0.406em;
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 15px 15px 0;
+  border-color: transparent #0092FF;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -15px;
+  top: 39px;
 }
 
 .speech-bubble-reply {
-  width: 200px;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  padding-left: 2em;
-  padding-right: 2em;
-	position: relative;
-	background: #eaeaea;
-	border-radius: .4em;
-  margin-top: 1em;
+  position: relative;
+  width: 250px;
+  height: 90px;
+  padding: 0px;
+  background: #CECDCD;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
   margin-right: 4em;
+  margin-top: 1em;
+  padding: 1em;
 }
 
 .speech-bubble-reply p {
@@ -207,15 +209,13 @@ h1 {
 
 .speech-bubble-reply:after {
   content: '';
-	position: absolute;
-	right: 0;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 0.406em solid transparent;
-	border-left-color: #eaeaea;
-	border-right: 0;
-	border-bottom: 0;
-	margin-top: 0.6em;
-	margin-right: -0.406em;
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 15px 15px 0;
+  border-color: transparent #CECDCD;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -15px;
+  top: 39px;
 }
