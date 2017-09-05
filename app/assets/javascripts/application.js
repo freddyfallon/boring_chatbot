@@ -21,8 +21,25 @@ $( document ).ready(function() {
   $('.opening-message a').on('click', function(e) {
     e.preventDefault();
     $(".opening-message").hide();
-    $(".message-one").show();
-    $(".reply-one").show();
-    $(".message-options").show();
+    $(".message-one").show("slow");
+    $(".reply-one").delay(1000).show("slow");
+    $(".message-options").delay(2000).show("fast", "easing");
   });
+
+  $('.level-three-message a').on('click', function(e) {
+    e.preventDefault();
+    $(".level-one-message").hide();
+    $(".level-two-message").hide();
+    $(".level-three-message").hide();
+    $(".message-two").show("slow");
+    $(".reply-two").delay(1000).show("slow");
+  });
+
+  $('.logo').on('click', function(e) {
+    location.reload();
+  })
+
+  $('#admin-area').on('click', function(e) {
+    location.reload();
+  })
 });
