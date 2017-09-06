@@ -37,7 +37,7 @@ RSpec.describe Message, type: :model do
     expect(message).not_to be_valid
   end
 
-  it 'is not valid unless it has a stage between 1 and 3' do
+  it 'is not valid unless it has a stage between 0 and 3' do
     message = Message.create(text: 'Hello!', boring_level: 2, stage: 9)
     expect(message).to have(1).error_on(:stage)
     expect(message).not_to be_valid

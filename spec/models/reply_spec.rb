@@ -36,7 +36,7 @@ RSpec.describe Reply, type: :model do
     expect(reply).not_to be_valid
   end
 
-  it 'is not valid unless it has a stage between 1 and 3' do
+  it 'is not valid unless it has a stage between 0 and 3' do
     reply = Reply.create(text: 'Hello!', tolerance_level: 2, stage: 9)
     expect(reply).to have(1).error_on(:stage)
     expect(reply).not_to be_valid
