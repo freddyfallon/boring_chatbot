@@ -1,24 +1,15 @@
-# README
+# Boring Chatbot
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![](boring-chatbot.png)
 
-Things you may want to cover:
+This is the Boring Chatbot, which decides whether you are boring or not.
 
-* Ruby version
+Ruby version
 
-* System dependencies
+Rails version
 
-* Configuration
+Test framework
 
-* Database creation
+How to run
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+How to run tests

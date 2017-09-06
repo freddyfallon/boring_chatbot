@@ -108,7 +108,7 @@ $( document ).ready(function() {
     location.reload();
   });
 
-  $('#admin-area').on('click', function(e) {
+  $('.admin-area a').on('click', function(e) {
     location.reload();
   });
 
