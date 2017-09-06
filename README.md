@@ -27,7 +27,11 @@ You can also run the tests using rspec with the command `rspec`
 
 ## My approach
 
-I
+I made the decision to have two models, messages and replies, which have two properties. In the case of the message, it has a boring level, which measures how boring the message is, along with a stage which indicates which stage of the chat the message should appear.
+
+I decided that the flow of the chat should take place within a single page, which proved difficult. I ended up using JQuery for the logic on the front-end, which meant that there was more business logic taking place around the view than I would have liked.
+
+I also created the admin section and made it link to two separate areas to control the messages and replies. From a user-experience point of view, this feels a little jarring, but I did my best to try to make it as logical as possible.
 
 ## User stories
 
@@ -110,4 +114,10 @@ So that I can add my own interesting content to the chat experience
 
 ## Successes
 
+This tech test gave me the opportunity to practice some front-end styling, which I had not done a lot of before. I also felt that the look and feel of the chat experience was reasonably strong.
+
+It also helped me identify some gaps in my knowledge to look at later, which was valuable in itself. I am going to spend some time exploring how to write API endpoints and work with Rails routes more effectively and how to work with AJAX.
+
 ## Challenges
+
+I was concerned that I would have trouble getting a Rails app up and running after spending quite a bit of time away from it, but it proved easier than expected. My main challenge was around creating a single page app in Rails, and I had a large amount of difficulty taking logic out of the view. I ended up using JQuery to render items on the page, which felt like a bit of a hack.
