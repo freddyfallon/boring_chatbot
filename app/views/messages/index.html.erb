@@ -1,0 +1,74 @@
+<% if user_signed_in? %>
+<div class="new-message-link">
+  <a href="/messages/new">Create a new message</a>
+</div>
+
+  <div class='all-messages'>
+    <div class="first-message-area" display: block>
+      <h2>First messages</h2>
+      <ul>
+        <% @first_messages.each do |message| %>
+          <li>
+              <%= message.text %>
+              Boring level: <%= message.boring_level %>
+              Stage: <%= message.stage %>
+              <%= link_to "Edit", edit_message_path(message) %>
+              <%= link_to "Delete", message_path(message), method: :delete %>
+            <% end %>
+          </li>
+      </ul>
+    </div>
+
+    <div class="stage-one-message-area">
+      <h2>Stage one</h1>
+      <ul>
+        <% @stage_one_messages.each do |message| %>
+          <li>
+              <%= message.text %>
+              Boring level: <%= message.boring_level %>
+              Stage: <%= message.stage %>
+              <%= link_to "Edit", edit_message_path(message) %>
+              <%= link_to "Delete", message_path(message), method: :delete %>
+            <% end %>
+          </li>
+      </ul>
+    </div>
+
+    <div class="stage-two-message-area">
+      <h2>Stage two</h1>
+      <ul>
+        <% @stage_two_messages.each do |message| %>
+          <li>
+              <%= message.text %>
+              Boring level: <%= message.boring_level %>
+              Stage: <%= message.stage %>
+              <%= link_to "Edit", edit_message_path(message) %>
+              <%= link_to "Delete", message_path(message), method: :delete %>
+            <% end %>
+          </li>
+      </ul>
+    </div>
+
+    <div class="stage-three-message-area">
+      <h2>Stage three</h1>
+      <ul>
+        <% @stage_three_messages.each do |message| %>
+          <li>
+              <%= message.text %>
+              Boring level: <%= message.boring_level %>
+              Stage: <%= message.stage %>
+              <%= link_to "Edit", edit_message_path(message) %>
+              <%= link_to "Delete", message_path(message), method: :delete %>
+            <% end %>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+<% else %>
+  <div class="sign-in-area">
+    <h1>Sign in</h1>
+      <p class="sign-in-text">To make changes to the chatbot's logic and the messages and replies, you will need to either log in or sign up below.</p>
+      <%= link_to "Sign in", '/users/sign_in' %>
+    <%= link_to "Sign up", '/users/sign_up' %>
+<% end %>

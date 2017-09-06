@@ -3,10 +3,10 @@ class GameController < ApplicationController
 
     #Opening message
 
-    @first_messages = Message.where(boring_level: 0)
+    @first_messages = Message.where(boring_level: 0, stage: 0)
     @first_message = @first_messages.sample
 
-    @first_replies = Reply.where(tolerance_level: 0)
+    @first_replies = Reply.where(tolerance_level: 0, stage: 0)
     @first_reply = @first_replies.sample
 
     #Stage 1 - messages
@@ -51,7 +51,7 @@ class GameController < ApplicationController
     @stage_two_message_level_three = @stage_two_messages_level_three.sample
 
     #Stage 2 - replies
-    @stage_two_replies_level_one = Reply.where(tolerance_level: 1, stage: 2)
+      @stage_two_replies_level_one = Reply.where(tolerance_level: 1, stage: 2)
 
     @stage_two_reply_level_one = @stage_two_replies_level_one.sample
 

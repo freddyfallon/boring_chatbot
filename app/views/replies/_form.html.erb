@@ -1,0 +1,19 @@
+<%= form_for @reply, html: {multipart: true} do |f| %>
+  <div>
+    <div>
+      <div>
+        <%= f.label :reply %>
+      </div>
+
+      <div>
+        <%= f.label :text %>
+        <%= f.text_field :text, class: 'caption-input' %>
+        <%= f.label :tolerance_level %>
+        <%= f.select :tolerance_level, [['0', 0],['1', 1],['2', 2],['3', 3]] %>
+        <%= f.label :stage %>
+        <%= f.select :stage, [['0', 0],['1', 1],['2', 2],['3', 3]] %>
+        <%= f.submit %>
+      </div>
+    </div>
+  </div>
+<% end %>

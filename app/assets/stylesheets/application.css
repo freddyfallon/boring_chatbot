@@ -114,7 +114,6 @@ header ul li a {
 }
 
 main {
-  font-family: "Anton";
   width: 100%;
   display: table;
   position: absolute;
@@ -218,4 +217,33 @@ h1 {
   z-index: 1;
   left: -15px;
   top: 39px;
+}
+
+.first-message-area {
+  width: 25%;
+  float: left;
+}
+
+.stage-one-message-area {
+  width: 25%;
+  float: left;
+}
+
+.stage-two-message-area {
+  width: 25%;
+  float: left;
+}
+
+.stage-three-message-area {
+  width: 25%;
+  float: left;
+}
+
+.all-messages {
+  padding: 3em;
+}
+.new-message-link {
+  width: 100%;
+  position: absolute;
+  padding: 1.5em;
 }
