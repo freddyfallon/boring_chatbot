@@ -1,17 +1,30 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <h1>Boring Chatbot Admin</h1>
-    <% if user_signed_in? %>
-    
-    <% else %>
-      <div class="sign-in-area">
-        <h1>Sign in</h1>
-          <p class="sign-in-text">To make changes to the chatbot's logic and the messages and replies, you will need to either log in or sign up below.</p>
-          <%= link_to "Sign in", '/users/sign_in' %>
-        <%= link_to "Sign up", '/users/sign_up' %>
-    <% end %>
-    </div>
+    <div class="admin-body">
+      <h1>Boring Chatbot Admin</h1>
+      <% if user_signed_in? %>
+        <div class="admin-intro">
+          <p>Welcome to the Boring Chatbot Admin area. This game works as follows:</p>
 
-  </body>
-</html>
+          <p>The game is comprised of messages (sent by the user), and replies (automatically sent by the app). A message has two properties: boring level and a stage. While a reply has a tolerance level and a stage. In total, there are four stages in the conversation:
+            <ul>
+              <li><strong>Opening message:</strong> This is where the user selects one message, which will have a boring level of 0 and a stage of 0 too. The app will reply with a message of a tolerance level of 0 and a stage of 0 here. This is just to kick the chat off.</li>
+              <li><strong>Stage one:</strong> This is where the user will be shown three random messages that are set to stage 1. Each will have a boring level of 1 to 3, and the replies will also be from stage 1 and have a tolerance level of 1 to 3. If the user selects a messages with a boring level of 3, then they will receive a reply of tolerance level 3 and the game will end. If they select any other message they will receive a reply with the a tolerance level equal to the message's boring level.</li>
+              <li><strong>Stage two:</strong> This stage works exactly the same as stage one. The user selects a stage 2 message and the app produces a stage 2 reply with a tolerance level equal to the message's boring level. The game ends if the user selects a message with boring level 3.</li>
+              <li><strong>Stage three:</strong> This stage works in a similar fashion to the previous two stages. However, if the user selects a message with a boring level of 1 or 2, the game ends and congratulates the user for not being boring.</li>
+            </ul>
+          </p>
+
+          <p>Now, edit the messages and replies on the links below:</p>
+          <div class="buttons">
+            <a href="/messages">Messages</a>
+            <a href="replies">Replies</a>
+          </div>
+        </div>
+      <% else %>
+        <div class="sign-in-area">
+          <h1>Sign in</h1>
+            <p class="sign-in-text">To make changes to the chatbot's logic and the messages and replies, you will need to either log in or sign up below.</p>
+            <%= link_to "Sign in", '/users/sign_in' %>
+          <%= link_to "Sign up", '/users/sign_up' %>
+      <% end %>
+      </div>
+    </div>

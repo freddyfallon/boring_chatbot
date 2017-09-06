@@ -9,9 +9,9 @@
       <ul>
         <% @first_replies.each do |reply| %>
           <li>
-              <%= reply.text %>
-              Tolerance level: <%= reply.tolerance_level %>
-              Stage: <%= reply.stage %>
+              <strong><%= reply.text %></strong><br />
+              Tolerance level: <%= reply.tolerance_level %><br />
+              Stage: <%= reply.stage %><br />
               <%= link_to "Edit", edit_reply_path(reply) %>
               <%= link_to "Delete", reply_path(reply), method: :delete %>
             <% end %>
@@ -24,9 +24,9 @@
         <ul>
           <% @stage_one_replies.each do |reply| %>
             <li>
-                <%= reply.text %>
-                Tolerance level: <%= reply.tolerance_level %>
-                Stage: <%= reply.stage %>
+                <strong><%= reply.text %></strong><br />
+                Tolerance level: <%= reply.tolerance_level %><br />
+                Stage: <%= reply.stage %><br />
                 <%= link_to "Edit", edit_reply_path(reply) %>
                 <%= link_to "Delete", reply_path(reply), method: :delete %>
               <% end %>
@@ -39,9 +39,9 @@
         <ul>
           <% @stage_two_replies.each do |reply| %>
             <li>
-                <%= reply.text %>
-                Tolerance level: <%= reply.tolerance_level %>
-                Stage: <%= reply.stage %>
+                <strong><%= reply.text %></strong><br />
+                Tolerance level: <%= reply.tolerance_level %><br />
+                Stage: <%= reply.stage %><br />
                 <%= link_to "Edit", edit_reply_path(reply) %>
                 <%= link_to "Delete", reply_path(reply), method: :delete %>
               <% end %>
@@ -54,9 +54,9 @@
         <ul>
           <% @stage_three_replies.each do |reply| %>
             <li>
-                <%= reply.text %>
-                Tolerance level: <%= reply.tolerance_level %>
-                Stage: <%= reply.stage %>
+                <strong><%= reply.text %></strong><br />
+                Tolerance level: <%= reply.tolerance_level %><br />
+                Stage: <%= reply.stage %><br />
                 <%= link_to "Edit", edit_reply_path(reply) %>
                 <%= link_to "Delete", reply_path(reply), method: :delete %>
               <% end %>

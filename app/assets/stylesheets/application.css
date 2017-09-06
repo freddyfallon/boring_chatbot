@@ -81,7 +81,6 @@ header ul {
   vertical-align: middle;
   line-height: 3em;
   margin: 0;
-  /*padding-left: 1em;*/
   font-size: 1em;
 }
 
@@ -108,7 +107,12 @@ header ul li a {
   font-size: 2em;
 }
 
-#admin-area {
+.admin-area {
+  float: right;
+  margin-right: 2em;
+}
+
+#sign-out {
   float: right;
   margin-right: 2em;
 }
@@ -120,6 +124,22 @@ main {
   height: 80%;
 }
 
+main p {
+  color: #696969;
+}
+
+main label {
+  color: #696969;
+}
+
+main li {
+  color: #696969;
+}
+
+main a {
+  color:
+}
+
 main > div {
   padding-top: 3em;
   padding-left: 2.5em;
@@ -127,11 +147,45 @@ main > div {
   vertical-align: top;
 }
 
+
 h1 {
   font-family: 'Merriweather';
   color: #696969;
   width: 100%;
   float:left;
+}
+
+.admin-body {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+}
+
+.admin-body li {
+  padding-right: 9em;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.admin-body a {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2em;
+  display: inline-block;
+  width: 6em;
+  height: 2em;
+  background-color: #EEEEEE;
+  color: #333333;
+  text-decoration: none;
+  padding: 5px 5px 5px 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
 }
 
 .message {
@@ -242,8 +296,47 @@ h1 {
 .all-messages {
   padding: 3em;
 }
+
+.all-messages li {
+  font-family: arial;
+  margin-left: -2.5em;
+  margin-right: 2em;
+  padding: 1em;
+  list-style-type: none;
+  padding-left: -3em;
+  margin-top: 1em;
+  background: #A56BB8;
+  color: white;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.all-messages li a {
+  font-size: 0.7em;
+  color: white;
+}
+
 .new-message-link {
   width: 100%;
   position: absolute;
   padding: 1.5em;
+}
+
+.message-area li {
+  list-style-type: none;
+  margin-left: -2em;
+  margin-top: 1em;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  width: 40%;
+  background-color: #77BBA4;
+  text-align: center;
+  padding: 1em;
+}
+
+.message-area li a {
+  color: white;
+  text-decoration: none;
 }

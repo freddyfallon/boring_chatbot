@@ -1,22 +1,24 @@
 <div class="stage-two-message-options" style="display:none">
 
-  <p class="message-options-intro">Now choose your reply. Make it good!</p>
+  <p class="message-options-intro">That wasn't too boring. What are you going to say next?</p>
+  <ul>
+    <li><div class="stage-two-level-one-message">
+      <a href="">
+        <%= @stage_two_message_level_one.text %>
+      </a>
+    </div></li>
 
-  <div class="stage-two-level-one-message">
-    <a href="">
-      <%= @stage_two_message_level_one.text %>
-    </a>
-  </div>
+    <li><div class="stage-two-level-two-message">
+      <a href="">
+        <%= @stage_two_message_level_two.text %>
+      </a>
+    </div></li>
 
-  <div class="stage-two-level-two-message">
-    <a href="">
-      <%= @stage_two_message_level_two.text %>
-    </a>
-  </div>
+    <li><div class="stage-two-level-three-message">
+      <a href="">
+        <%= @stage_two_message_level_three.text %>
+      </a>
+    </div></li>
+  </ul>
 
-  <div class="stage-two-level-three-message">
-    <a href="">
-      <%= @stage_two_message_level_three.text %>
-    </a>
-  </div>
 </div>

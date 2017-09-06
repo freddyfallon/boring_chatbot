@@ -9,9 +9,9 @@
       <ul>
         <% @first_messages.each do |message| %>
           <li>
-              <%= message.text %>
-              Boring level: <%= message.boring_level %>
-              Stage: <%= message.stage %>
+              <strong><%= message.text %></strong><br />
+              Boring level: <%= message.boring_level %><br />
+              Stage: <%= message.stage %><br />
               <%= link_to "Edit", edit_message_path(message) %>
               <%= link_to "Delete", message_path(message), method: :delete %>
             <% end %>
@@ -24,9 +24,9 @@
       <ul>
         <% @stage_one_messages.each do |message| %>
           <li>
-              <%= message.text %>
-              Boring level: <%= message.boring_level %>
-              Stage: <%= message.stage %>
+              <strong><%= message.text %></strong><br />
+              Boring level: <%= message.boring_level %><br />
+              Stage: <%= message.stage %><br />
               <%= link_to "Edit", edit_message_path(message) %>
               <%= link_to "Delete", message_path(message), method: :delete %>
             <% end %>
@@ -39,9 +39,9 @@
       <ul>
         <% @stage_two_messages.each do |message| %>
           <li>
-              <%= message.text %>
-              Boring level: <%= message.boring_level %>
-              Stage: <%= message.stage %>
+              <strong><%= message.text %></strong><br />
+              <Boring level: <%= message.boring_level %><br />
+              Stage: <%= message.stage %><br />
               <%= link_to "Edit", edit_message_path(message) %>
               <%= link_to "Delete", message_path(message), method: :delete %>
             <% end %>
@@ -54,9 +54,9 @@
       <ul>
         <% @stage_three_messages.each do |message| %>
           <li>
-              <%= message.text %>
-              Boring level: <%= message.boring_level %>
-              Stage: <%= message.stage %>
+              <strong><%= message.text %></strong><br />
+              Boring level: <%= message.boring_level %><br />
+              Stage: <%= message.stage %><br />
               <%= link_to "Edit", edit_message_path(message) %>
               <%= link_to "Delete", message_path(message), method: :delete %>
             <% end %>

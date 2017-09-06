@@ -10,10 +10,10 @@ messages = [
   [ "Manners is the family name of the Duke of Rutland", 3, 1 ],
   [ "From 1977 to 2011, the national flag of Libya was green.", 3, 1 ],
   [ "Manners is the family name of the Duke of Rutland", 3, 1 ],
-  [ "Interesting", 1, 2 ],
+  [ "The Spanish national anthem has no words.", 1, 2 ],
   [ "Minnie Mouse's first name is actually Minerva", 2, 2 ],
   [ "Cows produce around 88 pints of saliva per day", 3, 2 ],
-  [ "Interesting", 1, 3 ],
+  [ "Bananas are curved because they grow towards the sun", 1, 3 ],
   [ "Barbie the doll's last name is Roberts", 2, 3 ],
   [ "Bubble wrap was first designed to be used as wallpaper", 3, 3 ],
   [ "The collective noun for jellyfish is smack", 3, 3 ]

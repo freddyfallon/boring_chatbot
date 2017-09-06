@@ -18,12 +18,17 @@
         <li class="logo">
           <%= link_to "Boring Chatbot", root_path %>
         </li>
-        <% if !current_page?(admin_path)%>
-        <li id="admin-area">
+        <% if user_signed_in? %>
+          <li class="admin-area"><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+          <li class="admin-area"><%= link_to "Replies", replies_path %></li>
+          <li class="admin-area"><%= link_to "Messages", messages_path %></li>
+          <li class="admin-area"><%= link_to "Admin area", admin_path %></li>
+        <% elsif !current_page?(admin_path)%>
+        <li class="admin-area">
           <%= link_to "Admin area", admin_path %>
         </li>
         <% elsif user_signed_in? %>
-        <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+
         <% end %>
       </ul>
     </header>
