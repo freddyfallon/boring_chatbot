@@ -120,4 +120,4 @@ It also helped me identify some gaps in my knowledge to look at later, which was
 
 ## Challenges
 
-I was concerned that I would have trouble getting a Rails app up and running after spending quite a bit of time away from it, but it proved easier than expected. My main challenge was around creating a single page app in Rails, and I had a large amount of difficulty taking logic out of the view. I ended up using JQuery to render items on the page, which felt like a bit of a hack.
+I was concerned that I would have trouble getting a Rails app up and running after spending quite a bit of time away from it, but it proved easier than expected. My main challenge was around creating a single page app in Rails, and I had a large amount of difficulty taking logic out of the view. I ended up using JQuery to render items on the page, which felt like a bit of a hack. I would also have liked to have spent more time writing feature tests.
