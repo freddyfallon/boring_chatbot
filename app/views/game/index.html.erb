@@ -2,185 +2,35 @@
 <html>
 
   <div class="message-area">
+    <%= render 'opening_message' %>
 
-    <div class="opening-message">
-      <p>Press hello to get started</p>
-      <a href=''>
-          <%= @first_message.text %>
-      </a>
-    </div>
-    <div class="stage-one-message-options" style="display:none">
-      <p class="message-options-intro">Now choose your reply. Make it good!</p>
-      <div class="stage-one-level-one-message">
-        <a href="">
-          <%= @stage_one_message_level_one.text %>
-        </a>
-      </div>
+    <%= render 'stage_one_messages' %>
 
-      <div class="stage-one-level-two-message">
-        <a href="">
-          <%= @stage_one_message_level_two.text %>
-        </a>
-      </div>
+    <%= render 'stage_two_messages' %>
 
-      <div class="stage-one-level-three-message">
-        <a href="">
-          <%= @stage_one_message_level_three.text %>
-        </a>
-      </div>
-    </div>
+    <%= render 'stage_three_messages' %>
 
-    <div class="stage-two-message-options" style="display:none">
+    <%= render 'lose_game_area' %>
 
-      <p class="message-options-intro">Now choose your reply. Make it good!</p>
-
-      <div class="stage-two-level-one-message">
-        <a href="">
-          <%= @stage_two_message_level_one.text %>
-        </a>
-      </div>
-
-      <div class="stage-two-level-two-message">
-        <a href="">
-          <%= @stage_two_message_level_two.text %>
-        </a>
-      </div>
-
-      <div class="stage-two-level-three-message">
-        <a href="">
-          <%= @stage_two_message_level_three.text %>
-        </a>
-      </div>
-    </div>
-
-    <div class="stage-three-message-options" style="display:none">
-
-      <p class="message-options-intro">Now choose your reply. Make it good!</p>
-
-      <div class="stage-three-level-one-message">
-        <a href="">
-          <%= @stage_three_message_level_one.text %>
-        </a>
-      </div>
-
-      <div class="stage-three-level-two-message">
-        <a href="">
-          <%= @stage_three_message_level_two.text %>
-        </a>
-      </div>
-
-      <div class="stage-three-level-three-message">
-        <a href="">
-          <%= @stage_three_message_level_three.text %>
-        </a>
-      </div>
-    </div>
-    <div class="lose-game" style="display:none">
-      <h2>You are too boring</h2>
-      <p>The chatbot got so bored you that they left</p>
-      <p><a href="/">Play Again?</a></p>
-    </div>
-    <div class="win-game" style="display:none">
-      <h2>You are not boring!</h2>
-      <p>You managed to have a conversation with the chatbot without boring her to death.</p>
-      <p><a href="/">Play Again?</a></p>
-    </div>
+    <%= render 'win_game_area' %>
   </div>
 
   <div class="chat-area">
-    <!-- first message -->
-    <div class="message message-one speech-bubble-message" style="display:none">
-      <p><%= @first_message.text %></p>
-    </div>
+    <%= render 'first_message' %>
 
-    <!-- first reply  -->
+    <%= render 'first_reply' %>
 
-    <div class="message reply-one speech-bubble-reply" style="display:none">
-      <p><%= @first_reply.text %></p>
-    </div>
+    <%= render 'stage_one_message_display' %>
 
-    <!-- Stage one messages  -->
+    <%= render 'stage_one_reply_display' %>
 
-    <div class="message stage-one-message-level-one speech-bubble-message" style="display:none">
-      <p><%= @stage_one_message_level_one.text %></p>
-    </div>
+    <%= render 'stage_two_message_display' %>
 
-    <div class="message stage-one-message-level-two speech-bubble-message" style="display:none">
-      <p><%= @stage_one_message_level_two.text %></p>
-    </div>
+    <%= render 'stage_two_reply_display' %>
 
-    <div class="message stage-one-message-level-three speech-bubble-message" style="display:none">
-      <p><%= @stage_one_message_level_three.text %></p>
-    </div>
+    <%= render 'stage_three_message_display' %>
 
-    <!-- Stage one replies -->
-
-    <div class="message stage-one-reply-level-one speech-bubble-reply" style="display:none">
-      <p><%= @stage_one_reply_level_one.text %></p>
-    </div>
-
-    <div class="message stage-one-reply-level-two speech-bubble-reply" style="display:none">
-      <p><%= @stage_one_reply_level_two.text %></p>
-    </div>
-
-    <div class="message stage-one-reply-level-three speech-bubble-reply" style="display:none">
-      <p><%= @stage_one_reply_level_three.text %></p>
-    </div>
-
-    <!-- Stage two messages -->
-
-    <div class="message stage-two-message-level-one speech-bubble-message" style="display:none">
-      <p><%= @stage_two_message_level_one.text %></p>
-    </div>
-
-    <div class="message stage-two-message-level-two speech-bubble-message" style="display:none">
-      <p><%= @stage_two_message_level_two.text %></p>
-    </div>
-
-    <div class="message stage-two-message-level-three speech-bubble-message" style="display:none">
-      <p><%= @stage_two_message_level_three.text %></p>
-    </div>
-
-    <!-- Stage two replies -->
-
-    <div class="message stage-two-reply-level-one speech-bubble-reply" style="display:none">
-      <p><%= @stage_two_reply_level_one.text %></p>
-    </div>
-
-    <div class="message stage-two-reply-level-two speech-bubble-reply" style="display:none">
-      <p><%= @stage_two_reply_level_two.text %></p>
-    </div>
-
-    <div class="message stage-two-reply-level-three speech-bubble-reply" style="display:none">
-      <p><%= @stage_two_reply_level_three.text %></p>
-    </div>
-
-    <!-- Stage three messages -->
-
-    <div class="message stage-three-message-level-one speech-bubble-message" style="display:none">
-      <p><%= @stage_three_message_level_one.text %></p>
-    </div>
-
-    <div class="message stage-three-message-level-two speech-bubble-message" style="display:none">
-      <p><%= @stage_three_message_level_two.text %></p>
-    </div>
-
-    <div class="message stage-three-message-level-three speech-bubble-message" style="display:none">
-      <p><%= @stage_three_message_level_three.text %></p>
-    </div>
-    <!-- Stage three replies -->
-
-    <div class="message stage-three-reply-level-one speech-bubble-reply" style="display:none">
-      <p><%= @stage_three_reply_level_one.text %></p>
-    </div>
-
-    <div class="message stage-three-reply-level-two speech-bubble-reply" style="display:none">
-      <p><%= @stage_three_reply_level_two.text %></p>
-    </div>
-
-    <div class="message stage-three-reply-level-three speech-bubble-reply" style="display:none">
-      <p><%= @stage_three_reply_level_three.text %></p>
-    </div>
+    <%= render 'stage_three_reply_display' %>
   </div>
 
 </html>
